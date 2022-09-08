@@ -18,9 +18,9 @@ module "exafunction_module_repo_backend" {
   # ...
 }
 ```
-See the [Inputs section](#inputs) and [variables.tf](variables.tf) file for a full list of configuration options.
+See the [Inputs section](#inputs) and [variables.tf](https://github.com/Exafunction/terraform-aws-exafunction-cloud/tree/main/modules/module_repo_backend/variables.tf) file for a full list of configuration options.
 
-See [examples/simple_module_repo_backend](examples/simple_module_repo_backend) for an isolated working example of how to use this module or the repository's [root example](../..) for a full working example of how to use this module in conjunction with the other Exafunction modules.
+See [examples/simple_module_repo_backend](https://github.com/Exafunction/terraform-aws-exafunction-cloud/tree/main/modules/module_repo_backend/examples/simple_module_repo_backend) for an isolated working example of how to use this module or the repository's [root example](https://github.com/Exafunction/terraform-aws-exafunction-cloud) for a full working example of how to use this module in conjunction with the other Exafunction modules.
 
 <!-- BEGIN_TF_DOCS -->
 ## Resources
