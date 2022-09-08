@@ -68,6 +68,6 @@ For technical support or questions, check out our [community Slack](https://join
 
 For additional documentation about Exafunction including system concepts, setup guides, tutorials, API reference, and more, check out the [Exafunction documentation](https://docs.exafunction.com/).
 
-For an equivalent repository used to set up required infrastructure on [Google Cloud Platform (GCP)](https://cloud.google.com/) instead of AWS, visit [`Exafunction/terraform-aws-exafunction-cloud`](https://github.com/Exafunction/terraform-aws-exafunction-cloud).
+For an equivalent repository used to set up required infrastructure on [Google Cloud Platform (GCP)](https://cloud.google.com/) instead of AWS, visit [`Exafunction/terraform-gcp-exafunction-cloud`](https://github.com/Exafunction/terraform-gcp-exafunction-cloud).
 
 To deploy the ExaDeploy system within the EKS cluster set up using this repository, visit [`Exafunction/terraform-aws-exafunction-kube`](https://github.com/Exafunction/terraform-aws-exafunction-kube).
