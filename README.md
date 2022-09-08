@@ -1,6 +1,6 @@
 # Exafunction AWS Module
 
-<img src="images/banner.png" alt="Exafunction x AWS" width="1280"/>
+<img src="https://raw.githubusercontent.com/Exafunction/terraform-aws-exafunction-cloud/main/images/banner.png" alt="Exafunction x AWS" width="1280"/>
 
 This repository contains [modules](https://www.terraform.io/language/modules) used to set up [Amazon Web Services (AWS)](https://aws.amazon.com/) infrastructure for an [Exafunction](https://exafunction.com/) ExaDeploy system using [Terraform](https://www.terraform.io/).
 
@@ -8,7 +8,7 @@ This root folder is *an example* of how to use these modules together but is not
 
 ## System Diagram
 
-![System Diagram](images/system_diagram.png)
+![System Diagram](https://raw.githubusercontent.com/Exafunction/terraform-aws-exafunction-cloud/main/images/system_diagram.png)
 
 This diagram shows a typical setup of ExaDeploy on AWS (all within the user's cloud account). It consists of:
 * A client [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) with client applications running on some AWS infrastructure. In this diagram, the applications are running on [EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html), but they could also be running in an [EKS cluster](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html), developer machine connected to the VPC using [Amazon VPN](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html), or some other AWS infrastructure. The modules in this repository are not responsible for setting up any of this client infrastructure.
@@ -62,8 +62,12 @@ As mentioned above, the persistent module repository backend is not strictly nec
 
 ## Additional Resources
 
-For additional documentation about Exafunction including system concepts, setup guides, tutorials, API reference, and more, visit the [Exafunction documentation](https://docs.exafunction.com/).
+To learn more about Exafunction, visit the [Exafunction website](https://exafunction.com/).
+
+For technical support or questions, check out our [community Slack](https://join.slack.com/t/exa-community/shared_invite/zt-1fx9dgcz5-aUg_UWW7zJYc_tYfw1TyNw).
+
+For additional documentation about Exafunction including system concepts, setup guides, tutorials, API reference, and more, check out the [Exafunction documentation](https://docs.exafunction.com/).
 
 For an equivalent repository used to set up required infrastructure on [Google Cloud Platform (GCP)](https://cloud.google.com/) instead of AWS, visit [`Exafunction/terraform-aws-exafunction-cloud`](https://github.com/Exafunction/terraform-aws-exafunction-cloud).
 
-To deploy the ExaDeploy system within the EKS clsuter set up using this repository, visit [`Exafunction/terraform-aws-exafunction-kube`](https://github.com/Exafunction/terraform-aws-exafunction-kube).
+To deploy the ExaDeploy system within the EKS cluster set up using this repository, visit [`Exafunction/terraform-aws-exafunction-kube`](https://github.com/Exafunction/terraform-aws-exafunction-kube).
