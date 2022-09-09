@@ -8,7 +8,7 @@ Note that EKS clusters deployed in this VPC that want to deploy load balancers t
 ```hcl
 module "exafunction_network" {
   # Set the module source to use this module.
-  source = "github.com/Exafunction/terraform-aws-exafunction-cloud//modules/network"
+  source = "Exafunction/exafunction-cloud/aws//modules/network"
 
   # Set the name of the VPC and it's CIDR block.
   vpc_name       = "exafunction-vpc-simple"
