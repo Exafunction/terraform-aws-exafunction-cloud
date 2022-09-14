@@ -41,7 +41,7 @@ variable "runner_pools" {
     capacity_type = string
     # Instance type.
     node_instance_type = string
-    # Disk size.
+    # Disk size (GB).
     disk_size = number
     # Minimum number of nodes.
     min_size = number
@@ -74,13 +74,13 @@ variable "runner_pools" {
     condition = alltrue([
       for runner_pool in var.runner_pools : contains(["cpu", "gpu", "inferentia"], runner_pool.node_instance_category)
     ])
-    error_message = "Node instance category be one of [cpu, gpu, inferentia]."
+    error_message = "Node instance category must be one of [cpu, gpu, inferentia]."
   }
   validation {
     condition = alltrue([
       for runner_pool in var.runner_pools : contains(["ON_DEMAND", "SPOT"], runner_pool.capacity_type)
     ])
-    error_message = "Capacity type be one of [ON_DEMAND, SPOT]."
+    error_message = "Capacity type must be one of [ON_DEMAND, SPOT]."
   }
 }
 
