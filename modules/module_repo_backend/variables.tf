@@ -18,7 +18,12 @@ variable "db_storage" {
 variable "postgres_version" {
   description = "RDS Postgres version."
   type        = string
-  default     = "13.4"
+  default     = "13"
+
+  validation {
+    condition     = can(regex("^[0-9]+$", var.postgres_version))
+    error_message = "Postgres version may only specify a major version (to avoid Terraform conflicts due to RDS auto minor version upgrades)."
+  }
 }
 
 variable "db_username" {

@@ -43,7 +43,7 @@ module "exafunction_module_repo_backend" {
   exadeploy_id = "exafunction-mrbe-simple"
 
   db_storage             = 15
-  postgres_version       = "13.4"
+  postgres_version       = "13"
   db_username            = "test_user"
   db_port                = 5432
   db_instance_class      = "db.t4g.micro"
