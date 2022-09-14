@@ -96,7 +96,8 @@ module "peer_vpc" {
 }
 
 module "exafunction_peering" {
-  source               = "./modules/peering"
+  source = "./modules/peering"
+
   vpc_id               = module.exafunction_network.vpc_id
   route_table_ids      = module.exafunction_network.private_route_table_ids
   security_group_id    = module.exafunction_cluster.node_security_group_id

@@ -1,4 +1,4 @@
-# Exafunction Moduel Repository Backend Module
+# Exafunction Module Repository Backend Module
 
 This Terraform module is used to set up resources that provide a persistent backend for the ExaDeploy module repository. It is responsible for creating an S3 bucket and an RDS instance that will be used to store the module repository's objects and metadata respectively. This backend allows the data to be persisted even if the module repository pod is rescheduled. As an alternative to this persistent backend, the module repository also supports a fully local backend (backed by its own local filesystem on disk) which is not persisted if the module repository pod is rescheduled.
 
