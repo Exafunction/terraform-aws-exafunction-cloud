@@ -6,8 +6,9 @@ Note that this only adds a security group rule to the Exafunction VPC and not th
 ## Usage
 ```hcl
 module "exafunction_peering" {
-  # Set the module source to use this module.
+  # Set the module source and version to use this module.
   source = "Exafunction/exafunction-cloud/aws//modules/peering"
+  version = "0.1.0"
 
   # Set the VPC ID, route table IDs, and security group ID of the Exafunction VPC.
   vpc_id               = "vpc-abcd1234"
