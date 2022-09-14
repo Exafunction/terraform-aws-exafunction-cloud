@@ -49,7 +49,7 @@ See [examples/simple_module_repo_backend](https://github.com/Exafunction/terrafo
 | <a name="input_db_subnet_group_name"></a> [db\_subnet\_group\_name](#input\_db\_subnet\_group\_name) | Name of database subnet group to attach to. | `string` | n/a | yes |
 | <a name="input_db_username"></a> [db\_username](#input\_db\_username) | RDS database username. | `string` | `"postgres"` | no |
 | <a name="input_exadeploy_id"></a> [exadeploy\_id](#input\_exadeploy\_id) | Unique identifier for a deployment of the ExaDeploy system. | `string` | `"exafunction"` | no |
-| <a name="input_postgres_version"></a> [postgres\_version](#input\_postgres\_version) | RDS Postgres version. | `string` | `"13.4"` | no |
+| <a name="input_postgres_version"></a> [postgres\_version](#input\_postgres\_version) | RDS Postgres version. | `string` | `"13"` | no |
 | <a name="input_vpc_security_group_ids"></a> [vpc\_security\_group\_ids](#input\_vpc\_security\_group\_ids) | List of VPC security groups to associate. | `list(string)` | n/a | yes |
 
 ## Outputs
