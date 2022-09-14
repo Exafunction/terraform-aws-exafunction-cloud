@@ -9,7 +9,7 @@ Note that EKS clusters deployed in this VPC that want to deploy load balancers t
 module "exafunction_network" {
   # Set the module source and version to use this module.
   source = "Exafunction/exafunction-cloud/aws//modules/network"
-  version = "0.1.0"
+  version = "x.y.z"
 
   # Set the name of the VPC and its CIDR block.
   vpc_name       = "exafunction-vpc-simple"

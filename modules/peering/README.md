@@ -8,7 +8,7 @@ Note that this only adds a security group rule to the Exafunction VPC and not th
 module "exafunction_peering" {
   # Set the module source and version to use this module.
   source = "Exafunction/exafunction-cloud/aws//modules/peering"
-  version = "0.1.0"
+  version = "x.y.z"
 
   # Set the VPC ID, route table IDs, and security group ID of the Exafunction VPC.
   vpc_id               = "vpc-abcd1234"

@@ -7,7 +7,7 @@ This Terraform module is used to set up the required cluster resources for an Ex
 module "exafunction_cluster" {
   # Set the module source and version to use this module.
   source = "Exafunction/exafunction-cloud/aws//modules/cluster"
-  version = "0.1.0"
+  version = "x.y.z"
 
   # Set the cluster name.
   cluster_name = "exafunction-cluster"
