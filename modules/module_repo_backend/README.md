@@ -5,8 +5,9 @@ This Terraform module is used to set up resources that provide a persistent back
 ## Usage
 ```hcl
 module "exafunction_module_repo_backend" {
-  # Set the module source to use this module.
+  # Set the module source and version to use this module.
   source = "Exafunction/exafunction-cloud/aws//modules/module_repo_backend"
+  version = "0.1.0"
 
   # Set a unique identifier for created resources.
   exadeploy_id = "exafunction"

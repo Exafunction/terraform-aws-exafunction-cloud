@@ -5,8 +5,9 @@ This Terraform module is used to set up the required cluster resources for an Ex
 ## Usage
 ```hcl
 module "exafunction_cluster" {
-  # Set the module source to use this module.
+  # Set the module source and version to use this module.
   source = "Exafunction/exafunction-cloud/aws//modules/cluster"
+  version = "0.1.0"
 
   # Set the cluster name.
   cluster_name = "exafunction-cluster"
