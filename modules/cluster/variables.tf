@@ -95,3 +95,9 @@ variable "instance_tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "autoscaling_group_tags" {
+  description = "Tags to apply to all autoscaling groups managed by the cluster. These tags will not be propagated to the EC2 instances."
+  type        = map(string)
+  default     = {}
+}

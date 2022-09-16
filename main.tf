@@ -48,6 +48,14 @@ module "exafunction_cluster" {
     additional_taints      = []
     additional_labels      = {}
   }]
+
+  instance_tags = {
+    "owner" = "exafunction"
+  }
+
+  autoscaling_group_tags = {
+    "owner" = "exafunction"
+  }
 }
 
 module "exafunction_module_repo_backend" {

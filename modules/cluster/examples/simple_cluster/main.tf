@@ -102,4 +102,8 @@ module "exafunction_cluster" {
   instance_tags = {
     "owner" = "exafunction"
   }
+
+  autoscaling_group_tags = {
+    "owner" = "exafunction"
+  }
 }
