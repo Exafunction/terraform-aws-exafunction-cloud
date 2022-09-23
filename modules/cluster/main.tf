@@ -14,6 +14,8 @@ module "eks" {
   enable_irsa               = true
   manage_aws_auth_configmap = false
 
+  cloudwatch_log_group_retention_in_days = var.log_retention_in_days
+
   node_security_group_additional_rules = {
     ingress_self_all = {
       description = "Node to node all ports/protocols"
