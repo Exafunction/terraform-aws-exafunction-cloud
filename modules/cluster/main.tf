@@ -193,12 +193,12 @@ locals {
     propagate_at_launch = false
   }]
 
-  # Create map with a value for each pairing of node group resources (1-1 with ASG) and ASG tag.
+  # Create map with a value for each pairing of node group names (1-1 with ASG) and ASG tag.
   asg_tag_map = {
-    for idx, pair in setproduct([for _, v in module.eks.eks_managed_node_groups : v.node_group_resources], local.asg_tag_list) :
+    for idx, pair in setproduct(keys(module.eks.eks_managed_node_groups), local.asg_tag_list) :
     "${idx}" => {
-      node_group_resources = pair[0]
-      tag                  = pair[1]
+      node_group_name = pair[0]
+      tag             = pair[1]
     }
   }
 }
@@ -215,7 +215,7 @@ resource "aws_autoscaling_group_tag" "autoscaler_scale_to_zero" {
 
 resource "aws_autoscaling_group_tag" "additional_tags" {
   for_each               = local.asg_tag_map
-  autoscaling_group_name = one(one(each.value.node_group_resources).autoscaling_groups).name
+  autoscaling_group_name = one(one(module.eks.eks_managed_node_groups[each.value.node_group_name].node_group_resources).autoscaling_groups).name
   tag {
     key                 = each.value.tag.key
     value               = each.value.tag.value
