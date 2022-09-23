@@ -101,3 +101,9 @@ variable "autoscaling_group_tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "log_retention_in_days" {
+  description = "Number of days to retain EKS control plane logs."
+  type        = number
+  default     = 90
+}
