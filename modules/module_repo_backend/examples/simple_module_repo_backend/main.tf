@@ -48,5 +48,6 @@ module "exafunction_module_repo_backend" {
   db_port                = 5432
   db_instance_class      = "db.t4g.micro"
   db_subnet_group_name   = module.vpc.database_subnet_group_name
+  db_storage_encrypted   = true
   vpc_security_group_ids = [aws_security_group.test_security_group.id]
 }

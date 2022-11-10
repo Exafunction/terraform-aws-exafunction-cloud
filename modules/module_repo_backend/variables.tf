@@ -49,6 +49,12 @@ variable "db_subnet_group_name" {
   type        = string
 }
 
+variable "db_storage_encrypted" {
+  description = "Whether the database storage is encrypted."
+  type        = bool
+  default     = false
+}
+
 variable "vpc_security_group_ids" {
   description = "List of VPC security groups to associate."
   type        = list(string)
