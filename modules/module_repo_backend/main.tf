@@ -19,6 +19,7 @@ resource "aws_db_instance" "default_rds" {
   vpc_security_group_ids = var.vpc_security_group_ids
   db_subnet_group_name   = var.db_subnet_group_name
   port                   = var.db_port
+  storage_encrypted      = var.db_storage_encrypted
   skip_final_snapshot    = true
 }
 

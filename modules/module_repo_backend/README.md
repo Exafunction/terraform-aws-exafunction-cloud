@@ -46,6 +46,7 @@ See [examples/simple_module_repo_backend](https://github.com/Exafunction/terrafo
 | <a name="input_db_instance_class"></a> [db\_instance\_class](#input\_db\_instance\_class) | RDS instance class. | `string` | `"db.t4g.micro"` | no |
 | <a name="input_db_port"></a> [db\_port](#input\_db\_port) | RDS database port. | `number` | `5432` | no |
 | <a name="input_db_storage"></a> [db\_storage](#input\_db\_storage) | RDS storage size in GB. | `number` | `10` | no |
+| <a name="input_db_storage_encrypted"></a> [db\_storage\_encrypted](#input\_db\_storage\_encrypted) | Whether the database storage is encrypted. | `bool` | `false` | no |
 | <a name="input_db_subnet_group_name"></a> [db\_subnet\_group\_name](#input\_db\_subnet\_group\_name) | Name of database subnet group to attach to. | `string` | n/a | yes |
 | <a name="input_db_username"></a> [db\_username](#input\_db\_username) | RDS database username. | `string` | `"postgres"` | no |
 | <a name="input_exadeploy_id"></a> [exadeploy\_id](#input\_exadeploy\_id) | Unique identifier for a deployment of the ExaDeploy system. | `string` | `"exafunction"` | no |
