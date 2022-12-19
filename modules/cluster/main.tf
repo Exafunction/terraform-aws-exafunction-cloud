@@ -1,6 +1,6 @@
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "> 18.20.0"
+  version = "~> 19.4"
 
   cluster_name    = var.cluster_name
   cluster_version = var.cluster_version
@@ -198,7 +198,7 @@ locals {
   # Create map with a value for each pairing of node group names (1-1 with ASG) and ASG tag.
   asg_tag_map = {
     for idx, pair in setproduct(keys(module.eks.eks_managed_node_groups), local.asg_tag_list) :
-    "${idx}" => {
+    idx => {
       node_group_name = pair[0]
       tag             = pair[1]
     }
