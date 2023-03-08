@@ -107,3 +107,9 @@ variable "log_retention_in_days" {
   type        = number
   default     = 90
 }
+
+variable "kms_key_administrators" {
+  description = "Optional lst of IAM ARNs for key administrators."
+  type        = list(string)
+  default     = []
+}

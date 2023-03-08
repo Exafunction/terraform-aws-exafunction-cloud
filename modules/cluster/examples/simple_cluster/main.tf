@@ -43,6 +43,8 @@ module "vpc" {
   }
 }
 
+data "aws_caller_identity" "current" {}
+
 module "exafunction_cluster" {
   source = "../../"
 
@@ -106,4 +108,8 @@ module "exafunction_cluster" {
   autoscaling_group_tags = {
     "owner" = "exafunction"
   }
+
+  kms_key_administrators = [
+    data.aws_caller_identity.current.arn
+  ]
 }
