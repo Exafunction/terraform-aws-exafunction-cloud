@@ -14,6 +14,8 @@ module "eks" {
   enable_irsa               = true
   manage_aws_auth_configmap = false
 
+  kms_key_administrators = var.kms_key_administrators
+
   cloudwatch_log_group_retention_in_days = var.log_retention_in_days
 
   node_security_group_additional_rules = {
