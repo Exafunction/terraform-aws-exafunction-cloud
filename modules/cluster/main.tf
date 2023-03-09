@@ -12,7 +12,7 @@ module "eks" {
   subnet_ids = var.subnet_ids
 
   enable_irsa               = true
-  manage_aws_auth_configmap = false
+  manage_aws_auth_configmap = var.manage_aws_auth_configmap
 
   kms_key_administrators = var.kms_key_administrators
   aws_auth_roles         = var.aws_auth_roles
