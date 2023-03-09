@@ -15,6 +15,8 @@ module "eks" {
   manage_aws_auth_configmap = false
 
   kms_key_administrators = var.kms_key_administrators
+  aws_auth_roles         = var.aws_auth_roles
+  aws_auth_users         = var.aws_auth_users
 
   cloudwatch_log_group_retention_in_days = var.log_retention_in_days
 

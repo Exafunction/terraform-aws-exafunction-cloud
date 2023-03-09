@@ -53,6 +53,8 @@ See [examples/simple_cluster](https://github.com/Exafunction/terraform-aws-exafu
 |------|-------------|------|---------|:--------:|
 | <a name="input_additional_node_groups"></a> [additional\_node\_groups](#input\_additional\_node\_groups) | Map of additional EKS managed node group definitions to create. For schema, see https://github.com/terraform-aws-modules/terraform-aws-eks/blob/v18.29.0/modules/eks-managed-node-group/README.md#inputs. | `any` | `{}` | no |
 | <a name="input_autoscaling_group_tags"></a> [autoscaling\_group\_tags](#input\_autoscaling\_group\_tags) | Tags to apply to all autoscaling groups managed by the cluster. These tags will not be propagated to the EC2 instances. | `map(string)` | `{}` | no |
+| <a name="input_aws_auth_roles"></a> [aws\_auth\_roles](#input\_aws\_auth\_roles) | List of role maps to add to the aws-auth configmap. | `list(any)` | `[]` | no |
+| <a name="input_aws_auth_users"></a> [aws\_auth\_users](#input\_aws\_auth\_users) | List of user maps to add to the aws-auth configmap. | `list(any)` | `[]` | no |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Name of the EKS cluster to create. | `string` | `"exafunction-cluster"` | no |
 | <a name="input_cluster_version"></a> [cluster\_version](#input\_cluster\_version) | Kubernetes minor version to use for the EKS cluster (for example 1.22). | `string` | `"1.22"` | no |
 | <a name="input_instance_tags"></a> [instance\_tags](#input\_instance\_tags) | Tags to apply to all EC2 instances managed by the cluster. | `map(string)` | `{}` | no |
